@@ -10,10 +10,9 @@ jobs:
           ls ${{ github.workspace }}
       - name: Install pipenv
         run: python3 -m pip install pipenv
-      - run: pipenv lock
+      - run:
       - name: Install dependencies
-        run: pipenv install --dev
-      - name: Lance les tests
         run: |
+          pipenv lock
+          pipenv install --dev
           pipenv run pytest test/*
-      - run: echo "🍏 This job's status is ${{ job.status }}."
