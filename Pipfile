@@ -10,4 +10,4 @@ pytest = "*"
 discord = "~=1.7.3"
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"
