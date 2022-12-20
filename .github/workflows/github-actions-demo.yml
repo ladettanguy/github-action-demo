@@ -20,6 +20,8 @@ jobs:
       - run: pipenv lock
       - name: Install dependencies
         run: pipenv install --dev
+      - name: run on pipenv shell
+        run: pipenv shell
       - name: Lance les tests
         run: |
           pytest test/*
