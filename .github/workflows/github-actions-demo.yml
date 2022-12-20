@@ -19,7 +19,7 @@ jobs:
         run: python3 -m pip install pipenv
       - run: pipenv lock
       - name: Install dependencies
-        run: pipenv install
+        run: pipenv install --dev
       - name: Lance les tests
         run: |
           pytest test/*
