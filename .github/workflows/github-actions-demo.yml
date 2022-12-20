@@ -15,6 +15,8 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Install pytest
+        run: python3 -m pip install pytest
       - name: Lance les tests
         run: |
           pytest test/*
