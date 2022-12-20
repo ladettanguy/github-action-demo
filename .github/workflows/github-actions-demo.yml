@@ -16,3 +16,4 @@ jobs:
           pipenv lock
           pipenv install --dev
           pipenv run pytest test/*
+      - run: echo "🍏 This job's status is ${{ job.status }}."
